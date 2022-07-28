@@ -1,0 +1,18 @@
+5 > 2  true (verdadeiro) ou seja cinco é maior que dois?
+7 < 4  false ( falso )   ou seja sete é menor que quatro?
+8 >= 8 true (ou seja oito é maior ou igual a oito? resposta:O oito não é maior que oito mas é igual então é verdadeiro)
+9 <= 7 false (ou seja o nove é menor ou igual a sete? resposta: O nove não é menor nem igual a sete portanto é falso)
+5 == 5 true (ou seja cinco é igual a cinco? 
+4 != 4 false ( ou seja quatro é diferente de quatro?
+
+
+Só um simbôlo de igual (=) no javaScript não é igual é (recebe) para fazer o sinal de igual se coloca dois sinal de igual == 
+
+
+
+
+Observação 
+5 == 5 true ( cinco é igual a cinco? )
+5 == '5' true ( pro javaScript cinco é sim igual a cinco, o sinal de igualdade não testa o tipo e sim o valor, os dois tem o mesmo valor então cinco é igual a cinco )
+5 === '5' false ( cinco é igual a cinco?, Nesse caso os números tem que ser identicos do mesmo valor e o mesmo tipo ex: '5' === '5' verdadeiro )
+5 === 5 true (cinco é igual a cinco? Nesse caso os números são idênticos )

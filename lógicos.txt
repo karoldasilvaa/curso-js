@@ -1,0 +1,27 @@
+  Lógicos
+! = negação ( ex: Eu quero uma caneta mas ela não pode ser azul)
+&& = conjunção ( ex: Eu quero uma caneta azul e uma caneta vermelha)
+|| = disjunção ( ex: Eu quero uma caneta azul ou uma vermelha)
+
+
+
+Negação
+
+!  true - false                     (Se não é verdadeiro é falso
+   false - verdadeiro                Se não é falso é verdadeiro)
+
+
+Conjunção
+
+true && true - true                (Só pode ter um verdadeiro)
+true && false - false
+false && true - false
+false && false -false
+
+
+Disjunção 
+
+true || true - true               (Todos são verdadeiro menos o último)
+true || false - true  
+false || true - true
+false || false -false
