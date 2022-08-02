@@ -1,0 +1,24 @@
+DOM = Document Object Model (  Modelo de Objeto para Documento )
+
+É um modelo de objetos para documnetos, basicamente um conjunto de objetos dentro do seu navegador que vai dar acesso aos componentes 
+internos do web site.
+DOM não funciona dentro do Node js por exemplo, DOM ele está presente quando estou rodando javaScript dentro do meu navegador.
+
+
+Árvore DOM 
+É a árvore do site, dentro da árvore DOM temos o Parents ( pai ou mãe ) e o Childs ( filho(s) ) ex: na árvore Dom o HTML é o Parents
+e o head e o body são os Childs etc..., quem ta em cima é Parents e quem está em baixo é Childs
+
+
+Selecionando elementos da árvore DOM, cada quadrado da árvore DOM é um elemento
+
+Cinco metodos de acesso 
+
+Por Marca - getElementsByTagNane()
+Por ID - getElementById()
+Por Nome - getElementsbyName()
+Por Classe - getElementsByClassName()
+Por Seletor - querySelector() / querySelectorAll()   Esse é o cód mais moderno 
+
+Obs: Qunado o metodo de acesso estiver em plural ex: getElementsByName() abrimos [] e colocamos o número para definir oque é pra selecionar
+poe exemplo getElementsByName()[0] quando é o primeiro é o zero o segundo 1 e assim por diante, se não tiver o s não coloca o número.
