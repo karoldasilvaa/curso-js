@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 15pt arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>  
+    <!--  além de disparar diretamente pelo html colocando esses comandos dentro do id onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" posso disparar pelo javaScript colocando o a.addEventListener que é o mais certo a se fazer -->
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+       /* Funciona dos dois jeitos com a var = a dentro do function funciona só nesse function já a var = a em cima do function funciona para todos os function */
+
+        /*function clicar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Clicou!' 
+        } */
+
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a. style.background = 'green'
+        }
+
+    </script>
+</body>
+</html>

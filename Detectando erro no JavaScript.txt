@@ -1,0 +1,9 @@
+Dequectando erro no JavaScript
+
+Quando houver um erro no JavaScript o javaScript não mostra onde esta o erro apenas não funciona 
+
+Como você descobre o erro oque aconteceu, na maioria dos casos:
+
+Clicar inspecionar
+na reticencia ( três pontos ) e colocar nos dos quadradinhos qunado a abrir e você olhar em cima já vai perceber que tem um erro, em baixo 
+no console você vai ver o erro, já fala a linha geralmente o erro está na linha que o console está falando para cima só corrigir, e já vouta a funcionar

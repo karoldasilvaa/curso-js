@@ -1,0 +1,32 @@
+Eventos DOM 
+
+Evento é tudo aquilo que possa acontecer quando criamos um elemento ex: <div> 
+Obs: qualquer elemento mais estamos usando de exemplo a div.
+O mais comum é o exemplo de mouse
+Pode acontecer um monte de coisa o mais comum evento de mouse poe ex: posso chegar com o cursor e mover o mouse ate chegar dentro da div
+quando  o mouse chega dentro da div vai disparar o MOUSEENTER que o mouse entrou na div.
+Outra coisa que posso fazer é mover o mouse por dentro da div esse momento vai ser disparado varias vezez o MOUSEMOVE se eu pegar o mouse 
+clicar e segurar tenho o disparo MOUSEDOWN  no momento em que eu soltar o botão do mouse eu disparo outro evento o MOUSEUP também tenho o 
+movimento do clique inteiro apertar e soltar rapidamente eu tenho o evento CLICK quando eu mover o mouse pra fora da div ele vai disparar 
+o evento MOUSEOUT
+aqui temos seis eventos que pode ser disparado só com o movimento do mouse
+existem outros esses não são os últimos 
+
+Funções
+Mas para disparar um evento preciso entender oque é função ou uma funcionalidade,
+uma função em javaScript é um conjunto de códigos um conjunto de linhas que vão ser execultada só quando o evento ocorrer
+por ex: vai programar dez linhas, a gente chama de bloco imagina que o bloco tem dez linhas, essas dez linhas não vão ser execultada 
+automaticamente, essas dez linhas esse código ele só vai ocorrer quando por exemploquando eu clicar dentro da div, pra eu execultar essas dez
+linhas somente quando o evento ocorrer.
+Primeiro passo é colocar elas dentro de um bloco, um bloco em javaScript ele é delimitado entre os sinais de chaves {} 
+Abre chaves coloca o código e fecha chaves isso a gente chama de bloco 
+Esse bloco tem que ser nomeado com uma function, para que o método possa funcionar tenho que dar um nome a essa função, geralmente o nome 
+dessa função são ações que pode ser feita,geralmente funções de eventos, opcinalmente podem se colocados dentro dos parenteses um ou mais
+parametros 
+
+function ação(param){
+
+}
+
+ 
+
