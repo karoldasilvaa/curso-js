@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Números</title>
+    <style>
+        body {
+          font: normal 18pt arial;
+        }
+
+        input, select {
+            font: normal 18pt arial;
+            width: 100px;
+            text-align: center;
+
+        }
+
+        #res {
+            margin-top: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Calculando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> 
+    <select name="seloperadores" id="seloperadores">
+       <option value="+">+</option>
+       <option value="-">-</option>
+       <option value="*">*</option>
+       <option value="/">/</option>
+    </select>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="calcular" onclick="calcular()">
+    <div id="res">Resultado</div>
+    <script>
+        function calcular() {
+            //tanto get quanto query esta certo id é pra id e o selector para selecionar 
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var seloperadores = window.document.getElementById('seloperadores').value
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = 0
+            var msg = ''
+            if (seloperadores=='-') {
+                s = n1 - n2
+                msg = 'Subtração'
+                
+            }
+            else if (seloperadores=='*') {
+                s = n1 * n2
+                msg = 'Multiplicação'
+            }
+            else if (seloperadores=='/') {
+                s = n1 / n2
+                msg = 'Divisão'
+            }
+            else {
+                s = n1 + n2
+                msg = 'Soma'
+            }
+            res.innerHTML = `A ${msg} entre ${n1} e ${n2} é igual a <strong>${s}<strong/>`
+
+        }
+
+    </script>
+</body>
+</html>
