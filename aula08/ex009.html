@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nacionalidade</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+        .msg {
+            color: red
+        }
+    </style>
 </head>
 <body>
-    <script type="text/javascript" src="ex009.js">
+    <h1>País de Origem</h1>
+    Qual seu país: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar () {
+            var pais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+
+            if (pais.value.trim() == '') {
+                res.innerHTML = '<p class = msg >Mensagem Obrigatória</p>'
+            }
+            else {
+                res.innerHTML = `<p>Vivendo em <strong>${pais.value}</strong></p>`
+
+                if (pais.value.toLowerCase().trim() == 'brasil' || pais.value.toLowerCase().trim() == 'br') {
+                    res.innerHTML += '<p>Você é <strong>brasileiro.</p>'
+                }
+                else {
+                    res.innerHTML += '<p>Você é <strong>estrangeiro.</strong></p>'
+                } 
+            }
+        }
+        // toLowerCase() transformar em minusculo
+        // toUpperCase() transformar em maíusculo
+        // trim  para tirar o espaço
     </script>
 </body>
 </html>
