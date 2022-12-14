@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <style>
+     /* block um em baixo do outro inline um do lado do outro */
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aquamarine;
+       }
+
+       input, textarea{
+        width: 250px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+       }
+
+       textarea { 
+        margin-bottom: 20px;
+       }
+
+       form {
+        
+        text-align: center;
+        padding: 10px;
+        
+
+       }
+
+       legend {
+        text-align: left;
+       }
+
+       .container {
+          width: 100%;
+          max-width: 100px;
+          margin: auto;
+          text-align: center;
+          border-radius: 5px;;
+       }
+
+       .container, button {
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 -2px;
+        padding: 5px;
+        border: 1px solid;
+        margin: auto;
+       }
+       
+       table {
+       margin: auto;
+       text-align: left;
+
+       }
+       td {
+       padding-left: 20px;
+
+       }
+       
+       footer {
+        padding: 20px;
+       }
+    </style>
+</head>
+<body>
+
+    <h1>Preencha os dados para entrarmos em contato:</h1>
+    <form>
+        <fieldset>
+          <legend>Formulário</legend>
+          <table>
+           <tr>
+            <td><label for="txtnome">Nome:</label></td>
+            <td><input type="text" name="txtnome" id="txtnome" maxlength="20" required  placeholder="Digite seu nome" onkeypress="return lettersOnly(event);"></td>
+           </tr>
+           <tr>
+            <td><label for="txtsob">Sobrenome:</label></td>
+            <td><input type="text" name="txtsob" id="txtsob" maxlength="20" required placeholder="Digite seu sobrenome" onkeypress="return lettersOnly(event);"></td>
+           </tr>
+           <tr>
+            <td><label for="tel">Telefone:</label></td>
+            <td><input type="tel" name="tel" id="tel" maxlength="11" required placeholder="Digite seu telefone" data-contato></td>
+           </tr>
+           <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" name="email" id="email" maxlength="30" required placeholder="Digite seu E-mail"></td>
+           </tr>
+           <tr>
+            <td><label for="text">Opinião:</label></td>
+            <td><textarea id="message" name="message" placeholder="Deixe sua opinião" rows="5"></textarea>
+            </td>
+           </tr>
+          
+          </table>
+          
+          <div><button class="container">Enviar</button onclick="enviar()"></div>
+          
+        </fieldset>
+        <footer>Feito por Karolzinha</footer>
+    </form>
+    
+    <script>
+        function lettersOnly(e) {
+            var keyCode = (e.keyCode ? e.keyCode : e.which); // Variar a chamada do keyCode de acordo com o ambiente.
+         if (keyCode > 47 && keyCode < 58) {
+           e.preventDefault();
+            }
+
+        }
+        
+        // Contato
+           $("[data-contato]").mask("(99) 99999-9999");
+           $("[data-contato]").on('change', function(){
+            if($(this).val().length <= 14){
+            $(this).mask("(99) 9999-99999");
+        }else{
+            $(this).mask("(99) 99999-9999");
+        }
+    })
+     
+    </script>
+
+        <!-- maxlengt é para dar um limite de letra ou numero pra não dar erro no banco de dados  -->
+        <!-- required para avisar pra preencher o campo -->
+        <!-- rows quantas linhas -->
+        <!-- toLowerCase() transformar em minusculo
+        toUpperCase() transformar em maíusculo
+        trim  para tirar o espaço -->
+
+</body>
+</html>
