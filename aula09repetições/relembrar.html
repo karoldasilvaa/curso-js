@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Detran</h1>
+    <input type="number" name="txvel" id="txvel"> 
+    <input type="button" value="Verificar1" onclick="calcular('Anderson', 17, 455555522222)">
+    <input type="button" value="Verificar2" onclick="calcular('Karol', 24, 38626383835)">
+    <div id="res">
+
+    </div>
+    <script>
+        var vel = window.document.getElementById('txvel')
+        var res = window.document.getElementById('res')       
+       
+        function calcular(nome,idade,cpf) {
+
+            res.innerHTML = ''; // limpar
+
+            var v = Number(vel.value)
+
+            if (idade < 18){
+                res.innerHTML += '<p>' + nome + ' não pode dirigir</p>'
+            }
+
+            
+             res.innerHTML += `Sua velecidade é <strong>${v}km/h</strong>`
+            if (v > 60) {
+                res.innerHTML += '<p>' + nome +' ' + idade + ' ' + cpf + ' está multado por excesso de velocidade!</p>'
+            }
+            res.innerHTML += '<p>Dirija sempre com cinto de segurança</p>'
+        }
+    </script>
+</body>
+</html>
