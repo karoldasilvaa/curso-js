@@ -1,0 +1,21 @@
+Variáveis simples só consegue armazena um valor por vez
+
+Variáveis compostas devem ser capazes de armazenar varios valores dentro de uma mesma estrutura
+
+vaga a = [ 1,8,3,9 ]  cada espaço onde esta o numero recebe um número que começa com 0 que recebe o nome de chave ou indice
+indice:    0 1 2 3 
+
+A variável composta recebe o nome de array ou vetor elementos, ja os números que estão dentro do elemento  que são o conteúdo 
+ou valor, cada elemento é composto por seu valor e por uma chave de identificação.
+
+
+var num = [2, 3, 8]
+num[3] = 6      --    [2, 3, 8, 6]    (para colocar um valor dentro da var no indice 3)
+num.push(7)                           (para colocar um valor dentro da variavel no último indice)
+num.lenght                            (para saber o comprimento do array/vetor) 
+num.sort()            [2, 3, 6, 8]    (para colocar os valores em ordem crescente)
+
+OBJETOS 
+
+Diferente do vetor o objeto não tem índice 
+    

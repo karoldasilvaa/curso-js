@@ -5,7 +5,7 @@
 //  while (k <= 6) {     /* while = enquanto */
 //      console.log('Tudo bem?')
 //  k++ /* o k valia 1 agora está valendo 2 */
-// }
+// Obs: para fazer repetição dos números 123.... console.log('k') }
 
 /* Primeiro execulta o bloco depois testa */
 // var k = 1
@@ -14,6 +14,7 @@
 //     console.log('Tudo bem?')
 //     k++
 // } while (k <=6 )
+
 
 for (var x = 1; x <= 6; x++) {
     console.log('Karol')
