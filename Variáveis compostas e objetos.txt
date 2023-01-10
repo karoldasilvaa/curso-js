@@ -17,5 +17,21 @@ num.sort()            [2, 3, 6, 8]    (para colocar os valores em ordem crescent
 
 OBJETOS 
 
-Diferente do vetor o objeto não tem índice 
+Objetos ao invés dos [] se usa {}
+
+Diferente do vetor o objeto não tem índice fixa, você que nomeia o índice 
+
+Além de dar nome ao índice, no objeto você pode dar função ao índice, os objetos são variaveis, variavel guarda 
+valores, só que além de guardar valores, que são atributos, objetos podem guardar funcionalidades, que é oque chamamos
+de métodos.
+
+var amigo = {nome:'José',sexo:'M',peso:'85.4',engordar(p){}}
+
+amigo
+
+{José|  M | 85.4|[funcition]}
+ nome sexo  peso  engordar()
+
+
+
     
