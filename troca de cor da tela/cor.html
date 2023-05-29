@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1" onchange="trocar_cor()"> 
+        <!-- onchange = evento troca -->
+        <select name="cores">
+            <option value="white">branco</option>
+            <option value="black">preto</option>
+            <option value="red">vermelho</option>
+            <option value="green">verde</option>
+            <option value="yellow">amarelo</option>
+            <option value="blue">azul</option>
+            <option value="	#B0E0E6">azul claro</option>
+            <!-- também pode usar cores em hexa  -->
+        </select>
+    </form>
+    <script>
+       function trocar_cor(){
+        var cor = document.form1.cores.value;
+        document.bgColor = cor
+    };
+    </script>
+        <!-- 
+            se quizer começar com a cor da tela ja definida cód é dentro do body colocar bgColor = blue -->
+</body>
+</html>
