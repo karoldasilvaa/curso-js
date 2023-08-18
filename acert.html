@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerte</title>
+</head>
+
+<body>
+    <h1>oi</h1>
+    <script>
+        var resposta = prompt("Podemos começar? S para sim ou N para não").trim()
+        resposta = resposta.toUpperCase()
+
+        while (resposta == 's'.toUpperCase()) {
+            var n = prompt("Escolha um número de 1 á 10").trim()
+            if (n == '') {
+                window.alert("Sem número")
+            }
+            else {
+             n = parseFloat(n)
+                if (n < 7) {
+                    window.alert("número abaixo do valor")
+                }
+                else if (n > 7) {
+                    window.alert("número acima do valor")
+                }
+                else {
+                    window.alert("O número está correto")
+                    break
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

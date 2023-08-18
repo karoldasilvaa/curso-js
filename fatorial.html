@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = parseFloat(prompt("Digite um número para saber o fatorial:"))
+        var res = fatorial(n)
+
+        function fatorial(n) {
+            var fat = 1
+        for (var c = n; c > 1; c--){
+            fat *=c
+        }
+        return fat
+        }
+
+        fatorial(n)
+
+        alert(`O fatorial de ${n} é ${res}`)
+
+       
+    </script>
+</body>
+</html>

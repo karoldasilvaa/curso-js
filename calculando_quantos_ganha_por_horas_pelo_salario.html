@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+</head>
+
+<body>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+
+    <table>
+        <ul>
+            <li><label for="sal">Qual é o seu salário?</label></li>
+            <li> <input type="text" name="salario" id="salario" maxlength="10" placeholder="Apenas números" required>
+            </li>
+        </ul>
+
+        <ul>
+            <li><label for="horas">Quantas horas você trabalha por mês?</label></li>
+            <li><input type="text" name="horas" id="horas" maxlength="20" placeholder="Apenas números" required>
+            </li>
+        </ul>
+
+        <ul>
+            <li><input type="submit" value="Calcular" name="calculando" id="calc" onclick="calcular()"></li>
+        </ul>
+    </table>
+
+
+
+    <script>
+           $(document).ready(function(){
+            $('#salario').mask('000.000.000.000.000,00', {reverse: true})
+           })
+           
+           $('#horas').bind('keyup paste', function(){
+        this.value = this.value.replace(/[^0-9]/g, '');
+           });
+                   
+
+        function calcular() {
+            // pegando elemento id em jquery $('#salario').val() .val é o mesmo que .value que usa no javascript
+            var salario = parseFloat($('#salario').val().replace(/\./g, '').replace(',', '.'));  
+
+            // pegando elemento id em javascript (document.getElementById('horas').value)
+            var hora = parseFloat(document.getElementById('horas').value)
+
+            var calcular = (salario / hora)
+            total = calcular.toFixed(2)
+            document.write(`Seu salário é de <strong>${salario}</strong> reais, que dividido pelas suas horas de trabalho que é <strong>${hora}</strong> horas, você ganha <strong>${total}</strong> reais por hora.`)
+
+        }
+
+    </script>
+</body>
+
+</html>
+
